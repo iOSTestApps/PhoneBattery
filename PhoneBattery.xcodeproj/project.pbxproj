@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC720E01B3440E100F9DDEA /* AppDelegate.swift */; };
+		1FC720E31B3440E100F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC720E21B3440E100F9DDEA /* Images.xcassets */; };
+		1FC720E61B3440E100F9DDEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC720E41B3440E100F9DDEA /* LaunchScreen.xib */; };
+		1FC720F21B3440E100F9DDEA /* PhoneBatteryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC720F11B3440E100F9DDEA /* PhoneBatteryTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FC720EC1B3440E100F9DDEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC720D31B3440E100F9DDEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FC720DA1B3440E100F9DDEA;
+			remoteInfo = PhoneBattery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FC720DB1B3440E100F9DDEA /* PhoneBattery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBattery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC720DF1B3440E100F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC720E01B3440E100F9DDEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1FC720E21B3440E100F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FC720E51B3440E100F9DDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1FC720EB1B3440E100F9DDEA /* PhoneBatteryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneBatteryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC720F01B3440E100F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC720F11B3440E100F9DDEA /* PhoneBatteryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBatteryTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FC720D81B3440E100F9DDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC720E81B3440E100F9DDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FC720D21B3440E100F9DDEA = {
+			isa = PBXGroup;
+			children = (
+				1FC720DD1B3440E100F9DDEA /* PhoneBattery */,
+				1FC720EE1B3440E100F9DDEA /* PhoneBatteryTests */,
+				1FC720DC1B3440E100F9DDEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FC720DC1B3440E100F9DDEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FC720DB1B3440E100F9DDEA /* PhoneBattery.app */,
+				1FC720EB1B3440E100F9DDEA /* PhoneBatteryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FC720DD1B3440E100F9DDEA /* PhoneBattery */ = {
+			isa = PBXGroup;
+			children = (
+				1FC720E01B3440E100F9DDEA /* AppDelegate.swift */,
+				1FC720E21B3440E100F9DDEA /* Images.xcassets */,
+				1FC720E41B3440E100F9DDEA /* LaunchScreen.xib */,
+				1FC720DE1B3440E100F9DDEA /* Supporting Files */,
+			);
+			path = PhoneBattery;
+			sourceTree = "<group>";
+		};
+		1FC720DE1B3440E100F9DDEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FC720DF1B3440E100F9DDEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FC720EE1B3440E100F9DDEA /* PhoneBatteryTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FC720F11B3440E100F9DDEA /* PhoneBatteryTests.swift */,
+				1FC720EF1B3440E100F9DDEA /* Supporting Files */,
+			);
+			path = PhoneBatteryTests;
+			sourceTree = "<group>";
+		};
+		1FC720EF1B3440E100F9DDEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FC720F01B3440E100F9DDEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FC720DA1B3440E100F9DDEA /* PhoneBattery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC720F51B3440E100F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBattery" */;
+			buildPhases = (
+				1FC720D71B3440E100F9DDEA /* Sources */,
+				1FC720D81B3440E100F9DDEA /* Frameworks */,
+				1FC720D91B3440E100F9DDEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneBattery;
+			productName = PhoneBattery;
+			productReference = 1FC720DB1B3440E100F9DDEA /* PhoneBattery.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FC720EA1B3440E100F9DDEA /* PhoneBatteryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC720F81B3440E100F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBatteryTests" */;
+			buildPhases = (
+				1FC720E71B3440E100F9DDEA /* Sources */,
+				1FC720E81B3440E100F9DDEA /* Frameworks */,
+				1FC720E91B3440E100F9DDEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FC720ED1B3440E100F9DDEA /* PBXTargetDependency */,
+			);
+			name = PhoneBatteryTests;
+			productName = PhoneBatteryTests;
+			productReference = 1FC720EB1B3440E100F9DDEA /* PhoneBatteryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FC720D31B3440E100F9DDEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Marcel Voss";
+				TargetAttributes = {
+					1FC720DA1B3440E100F9DDEA = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1FC720EA1B3440E100F9DDEA = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 1FC720DA1B3440E100F9DDEA;
+					};
+				};
+			};
+			buildConfigurationList = 1FC720D61B3440E100F9DDEA /* Build configuration list for PBXProject "PhoneBattery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FC720D21B3440E100F9DDEA;
+			productRefGroup = 1FC720DC1B3440E100F9DDEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FC720DA1B3440E100F9DDEA /* PhoneBattery */,
+				1FC720EA1B3440E100F9DDEA /* PhoneBatteryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FC720D91B3440E100F9DDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC720E61B3440E100F9DDEA /* LaunchScreen.xib in Resources */,
+				1FC720E31B3440E100F9DDEA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC720E91B3440E100F9DDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FC720D71B3440E100F9DDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC720E71B3440E100F9DDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC720F21B3440E100F9DDEA /* PhoneBatteryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FC720ED1B3440E100F9DDEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FC720DA1B3440E100F9DDEA /* PhoneBattery */;
+			targetProxy = 1FC720EC1B3440E100F9DDEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FC720E41B3440E100F9DDEA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FC720E51B3440E100F9DDEA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FC720F31B3440E100F9DDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FC720F41B3440E100F9DDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FC720F61B3440E100F9DDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhoneBattery/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1FC720F71B3440E100F9DDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhoneBattery/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1FC720F91B3440E100F9DDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhoneBatteryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneBattery.app/PhoneBattery";
+			};
+			name = Debug;
+		};
+		1FC720FA1B3440E100F9DDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhoneBatteryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneBattery.app/PhoneBattery";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FC720D61B3440E100F9DDEA /* Build configuration list for PBXProject "PhoneBattery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC720F31B3440E100F9DDEA /* Debug */,
+				1FC720F41B3440E100F9DDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FC720F51B3440E100F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBattery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC720F61B3440E100F9DDEA /* Debug */,
+				1FC720F71B3440E100F9DDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1FC720F81B3440E100F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBatteryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC720F91B3440E100F9DDEA /* Debug */,
+				1FC720FA1B3440E100F9DDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FC720D31B3440E100F9DDEA /* Project object */;
+}

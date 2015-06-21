@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController {
     var batteryLevel : Float?
     var batteryState : UIDeviceBatteryState!
 
+    @IBOutlet weak var percentageLabel: WKInterfaceLabel!
     @IBOutlet weak var statusLabel: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
@@ -36,12 +37,27 @@ class InterfaceController: WKInterfaceController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "batteryLevelChanged:", name: UIDeviceBatteryLevelDidChangeNotification, object: device)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "batteryStateChanged:", name: UIDeviceBatteryStateDidChangeNotification, object: device)
 
-        statusLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
+        percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
+        statusLabel.setText(self.stringForBatteryState(batteryState))
+        
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    func stringForBatteryState(batteryState: UIDeviceBatteryState) -> String {
+        if batteryState == UIDeviceBatteryState.Full {
+            return NSLocalizedString("FULL", comment: "")
+        } else if batteryState == UIDeviceBatteryState.Charging {
+            return NSLocalizedString("CHARGING", comment: "")
+        } else if batteryState == UIDeviceBatteryState.Unplugged {
+            return NSLocalizedString("REMAINING", comment: "")
+        } else {
+            // State is unknown
+            return NSLocalizedString("UNKNOWN", comment: "")
+        }
     }
     
     func batteryLevelChanged(notification: NSNotification) {

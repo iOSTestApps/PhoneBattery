@@ -10,10 +10,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PhoneBattery_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="Label" id="VHD-5w-nIS"/>
+                        <label alignment="center" verticalAlignment="center" text="Label" id="VHD-5w-nIS">
+                            <fontDescription key="font" type="system" pointSize="22"/>
+                        </label>
+                        <label height="20" alignment="center" verticalAlignment="center" text="Charging" id="8u1-cd-5eg"/>
                     </items>
                     <connections>
-                        <outlet property="statusLabel" destination="VHD-5w-nIS" id="jRg-Vu-adg"/>
+                        <outlet property="percentageLabel" destination="VHD-5w-nIS" id="brb-Dm-bLF"/>
+                        <outlet property="statusLabel" destination="8u1-cd-5eg" id="yG4-Wf-jal"/>
                     </connections>
                 </controller>
             </objects>
@@ -25,9 +29,20 @@
                 <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="PhoneBattery_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group alignment="left" id="gv7-I2-MZq"/>
-                        <group alignment="left" id="eew-Gs-W6Y"/>
+                        <group alignment="left" layout="vertical" id="eew-Gs-W6Y">
+                            <items>
+                                <label alignment="center" text="Phone Battery" id="WYK-D0-EBq"/>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="Ctq-ON-Tcg"/>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="FTh-Ce-Fcv"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="percentageLabel" destination="Ctq-ON-Tcg" id="IsN-CF-OsG"/>
+                        <outlet property="statusLabel" destination="FTh-Ce-Fcv" id="EUu-ms-t6P"/>
+                        <outlet property="titleLabel" destination="WYK-D0-EBq" id="DMJ-Sv-xar"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="164" y="514"/>

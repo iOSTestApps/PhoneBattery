@@ -7,3 +7,13 @@
 */
 
 "CHARGING" = "Charging";
+"REMAINING" = "Remaining";
+"UNKNOWN" = "Unknown";
+"FULL" = "Full";
+
+"PHONE_BATTERY" = "Phone Battery";
+"HELP" = "Help";
+"ABOUT" = "About";
+"RATE_ON_STORE" = "Rate on the App Store";
+"WHO_MADE_THIS" = "Who made this";
+"THANKS_DOWNLOADING" = "Thanks for downloading and using PhoneBattery!";

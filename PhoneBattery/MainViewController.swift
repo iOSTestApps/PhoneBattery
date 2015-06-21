@@ -7,59 +7,45 @@
 //
 
 import UIKit
+import MessageUI
 
-class MainViewController: UIViewController {
+class MainViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+    }
     
-    let device = UIDevice.currentDevice()
-    var batteryLevel : Float?
-    var batteryState : UIDeviceBatteryState!
-
+    required init!(coder aDecoder: NSCoder!) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init!(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        device.batteryMonitoringEnabled = true
-        batteryLevel = device.batteryLevel
-        batteryState = device.batteryState
-        
-        // KVO for oberserving battery level and state
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "batteryLevelChanged:", name: UIDeviceBatteryLevelDidChangeNotification, object: device)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "batteryStateChanged:", name: UIDeviceBatteryStateDidChangeNotification, object: device)
         
         
-        let percentageLabel = UILabel()
-        percentageLabel.textAlignment = .Center
-        percentageLabel.text = String(format: "%.f%%", batteryLevel! * 100)
-        percentageLabel.font = UIFont.systemFontOfSize(20)
-        percentageLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.view.addSubview(percentageLabel)
+        self.title = "PhoneBattery"
         
-        self.view.addConstraint(NSLayoutConstraint(item: percentageLabel, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0))
         
-        self.view.addConstraint(NSLayoutConstraint(item: percentageLabel, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: 0))
+        // TODO: Pageable table view header with tutorial
         
         
         
+        let descriptionLabel = UILabel()
+        descriptionLabel.textAlignment = .Justified
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.text = "PhoneBattery allows you to check your phone's battery life right on your Apple Watch.\n\nTo launch it, simply open the PhoneBattery app on your Apple Watch or add the PhoneBattery Glance to check it even faster."
+        descriptionLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.view.addSubview(descriptionLabel)
         
+        self.view.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
         
-        /*
-        let aboutButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        aboutButton.setTitle("", forState: UIControlState.Normal)
-        aboutButton.layer.cornerRadius = 20
-        aboutButton.backgroundColor = UIColor.blackColor()
-        aboutButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.view .addSubview(aboutButton)
+        self.view.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 100))
         
-        self.view.addConstraint(NSLayoutConstraint(item: aboutButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -30))
-        
-        self.view.addConstraint(NSLayoutConstraint(item: aboutButton, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: -100))
-        
-        self.view.addConstraint(NSLayoutConstraint(item: aboutButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 50))
-        
-        self.view.addConstraint(NSLayoutConstraint(item: aboutButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))*/
-        
-        
-        
-        //percentageLabel.addConstraint(NSLayoutConstraint(ite)
+        self.view.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: -50))
         
         
     }
@@ -69,24 +55,68 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func batteryLevelChanged(notification: NSNotification) {
-        batteryLevel = device.batteryLevel
+    // PRAGMA MARK: UITableViewDataSource
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     
-    func batteryStateChanged(notification: NSNotification) {
-        batteryState = device.batteryState
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 2
+        }
+        return 0
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier") as! UITableViewCell?
         
-        if batteryState == UIDeviceBatteryState.Full {
-            
-        } else if batteryState == UIDeviceBatteryState.Charging {
-            
-        } else if batteryState == UIDeviceBatteryState.Unplugged {
-            
-        } else {
-            // State is unknown
-            
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellIdentifier")
         }
         
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                cell!.textLabel!.text = NSLocalizedString("HELP", comment: "")
+                cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            } else if indexPath.row == 1 {
+                cell!.textLabel!.text = NSLocalizedString("ABOUT", comment: "")
+                cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            }
+        }
+        
+        return cell!
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                if MFMailComposeViewController.canSendMail() {
+                    let mailComposer = MFMailComposeViewController()
+                    mailComposer.mailComposeDelegate = self
+                    
+                    
+                    let device = UIDevice.currentDevice()
+                    let shortString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+                    let buildString = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+                    
+                    let subjectString = String(format: "Support PhoneBattery: %@ (%@)", shortString, buildString)
+                    let bodyString = String(format: "\n\n\n----\niOS Version: d\nDevice: sda\nLocale: sd", device.systemVersion, device.model)
+                    mailComposer.setMessageBody(bodyString, isHTML: false)
+                    mailComposer.setSubject(subjectString)
+                    mailComposer.setToRecipients(["help@marcelvoss.com"])
+                    
+                    self.presentViewController(mailComposer, animated: true, completion: nil)
+                }
+            } else if indexPath.row == 1 {
+                self.navigationController?.pushViewController(AboutViewController(style: UITableViewStyle.Grouped), animated: true)
+            }
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
 }

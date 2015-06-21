@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F2017871B355EEC00667188 /* BatteryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2017861B355EEC00667188 /* BatteryHelper.swift */; };
+		1F93FE7D1B36A1DE00441356 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721211B3440F700F9DDEA /* Localizable.strings */; };
+		1FA8EC351B36FE7C001BEE4B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA8EC341B36FE7C001BEE4B /* AboutViewController.swift */; };
+		1FA8EC371B370439001BEE4B /* CreatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA8EC361B370439001BEE4B /* CreatorTableViewCell.swift */; };
 		1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC720E01B3440E100F9DDEA /* AppDelegate.swift */; };
 		1FC720E31B3440E100F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC720E21B3440E100F9DDEA /* Images.xcassets */; };
 		1FC720E61B3440E100F9DDEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC720E41B3440E100F9DDEA /* LaunchScreen.xib */; };
@@ -62,7 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F2017861B355EEC00667188 /* BatteryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryHelper.swift; sourceTree = "<group>"; };
+		1FA8EC341B36FE7C001BEE4B /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		1FA8EC361B370439001BEE4B /* CreatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatorTableViewCell.swift; sourceTree = "<group>"; };
 		1FC720DB1B3440E100F9DDEA /* PhoneBattery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBattery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC720DF1B3440E100F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC720E01B3440E100F9DDEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +112,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA8EC381B37043D001BEE4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FA8EC361B370439001BEE4B /* CreatorTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1FA8EC391B37043F001BEE4B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FC721231B34410300F9DDEA /* MainViewController.swift */,
+				1FA8EC341B36FE7C001BEE4B /* AboutViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		1FC720D21B3440E100F9DDEA = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				1FC720E01B3440E100F9DDEA /* AppDelegate.swift */,
-				1FC721231B34410300F9DDEA /* MainViewController.swift */,
-				1F2017861B355EEC00667188 /* BatteryHelper.swift */,
+				1FA8EC391B37043F001BEE4B /* View Controllers */,
+				1FA8EC381B37043D001BEE4B /* Views */,
 				1FC720DE1B3440E100F9DDEA /* Supporting Files */,
 			);
 			path = PhoneBattery;
@@ -350,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC721081B3440E800F9DDEA /* Images.xcassets in Resources */,
+				1F93FE7D1B36A1DE00441356 /* Localizable.strings in Resources */,
 				1FC7210C1B3440E800F9DDEA /* PhoneBattery WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,8 +391,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA8EC371B370439001BEE4B /* CreatorTableViewCell.swift in Sources */,
 				1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */,
-				1F2017871B355EEC00667188 /* BatteryHelper.swift in Sources */,
+				1FA8EC351B36FE7C001BEE4B /* AboutViewController.swift in Sources */,
 				1FC721241B34410300F9DDEA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

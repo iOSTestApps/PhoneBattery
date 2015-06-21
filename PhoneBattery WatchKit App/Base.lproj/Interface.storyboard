@@ -32,7 +32,9 @@
                         <group alignment="left" layout="vertical" id="eew-Gs-W6Y">
                             <items>
                                 <label alignment="center" text="Phone Battery" id="WYK-D0-EBq"/>
-                                <label alignment="center" verticalAlignment="center" text="Label" id="Ctq-ON-Tcg"/>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="Ctq-ON-Tcg">
+                                    <fontDescription key="font" type="system" pointSize="19"/>
+                                </label>
                                 <label alignment="center" verticalAlignment="center" text="Label" id="FTh-Ce-Fcv"/>
                             </items>
                         </group>

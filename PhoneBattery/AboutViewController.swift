@@ -50,9 +50,9 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         
         visualEffectView.addConstraint(NSLayoutConstraint(item: appIconImageView, attribute: .Right, relatedBy: .Equal, toItem: visualEffectView, attribute: .CenterX, multiplier: 1.0, constant: -20))
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: appIconImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 130 / 2))
+        visualEffectView.addConstraint(NSLayoutConstraint(item: appIconImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 75))
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: appIconImageView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 130 / 2))
+        visualEffectView.addConstraint(NSLayoutConstraint(item: appIconImageView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 75))
         
         
         let nameLabel = UILabel()

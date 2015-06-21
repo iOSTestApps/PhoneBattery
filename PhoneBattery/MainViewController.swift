@@ -32,21 +32,36 @@ class MainViewController: UITableViewController, MFMailComposeViewControllerDele
         
         // TODO: Pageable table view header with tutorial
         
+        var headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 370))
         
+        let imageView = UIImageView(image: UIImage(named: "WatchImage"))
+        imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        imageView.contentMode = .ScaleAspectFit
+        headerView.addSubview(imageView)
+        
+        headerView.addConstraint(NSLayoutConstraint(item: imageView, attribute: .CenterX, relatedBy: .Equal, toItem: headerView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        headerView.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: headerView, attribute: .Top, multiplier: 1.0, constant: 20))
+        
+        headerView.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 150))
         
         let descriptionLabel = UILabel()
         descriptionLabel.textAlignment = .Justified
         descriptionLabel.numberOfLines = 0
-        descriptionLabel.text = "PhoneBattery allows you to check your phone's battery life right on your Apple Watch.\n\nTo launch it, simply open the PhoneBattery app on your Apple Watch or add the PhoneBattery Glance to check it even faster."
+        descriptionLabel.textColor = UIColor(red:0.44, green:0.44, blue:0.46, alpha:1)
+        descriptionLabel.font = UIFont.systemFontOfSize(16)
+        descriptionLabel.text = "PhoneBattery allows you to check your phone's battery life right on your Apple Watch."
         descriptionLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.view.addSubview(descriptionLabel)
+        headerView.addSubview(descriptionLabel)
         
-        self.view.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        headerView.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .CenterX, relatedBy: .Equal, toItem: headerView, attribute: .CenterX, multiplier: 1.0, constant: 0))
         
-        self.view.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 100))
+        headerView.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .Top, relatedBy: .Equal, toItem: imageView, attribute: .Bottom, multiplier: 1.0, constant: 20))
         
-        self.view.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: -50))
+        headerView.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .Width, relatedBy: .Equal, toItem: headerView, attribute: .Width, multiplier: 1.0, constant: -50))
         
+ 
+        tableView.tableHeaderView = headerView
         
     }
 

@@ -101,7 +101,7 @@ class MainViewController: UITableViewController, MFMailComposeViewControllerDele
                     let buildString = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
                     
                     let subjectString = String(format: "Support PhoneBattery: %@ (%@)", shortString, buildString)
-                    let bodyString = String(format: "\n\n\n----\niOS Version: d\nDevice: sda\nLocale: sd", device.systemVersion, device.model)
+                    let bodyString = String(format: "\n\n\n----\niOS Version: %@\nDevice: %@\n", device.systemVersion, device.model)
                     mailComposer.setMessageBody(bodyString, isHTML: false)
                     mailComposer.setSubject(subjectString)
                     mailComposer.setToRecipients(["help@marcelvoss.com"])

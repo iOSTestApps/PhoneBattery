@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class AboutViewController: UITableViewController {
+class AboutViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     
     override init(style: UITableViewStyle) {
         super.init(style: style)
@@ -29,9 +30,9 @@ class AboutViewController: UITableViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "sharePressed:")
         
-        var headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 160))
+        var headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 130))
         let backgroundImageView = UIImageView(image: UIImage(named: "BackgroundImage"))
-        backgroundImageView.frame = CGRectMake(0, 0, self.view.frame.size.width, 130)
+        backgroundImageView.frame = CGRectMake(0, 0, self.view.frame.size.width, headerView.frame.size.height)
         backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFit
         headerView.addSubview(backgroundImageView)
         
@@ -101,7 +102,7 @@ class AboutViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
-        return 3
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,21 +111,21 @@ class AboutViewController: UITableViewController {
             return 2
         } else if section == 1 {
             return 1
-        } else if section == 2 {
-            return 1
         }
         return 0
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 1 {
+        if section == 0 {
+            return NSLocalizedString("GENERAL", comment: "").uppercaseString
+        } else if section == 1 {
             return NSLocalizedString("WHO_MADE_THIS", comment: "").uppercaseString
         }
         return ""
     }
     
     override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        if section == 2 {
+        if section == 1 {
             return NSLocalizedString("THANKS_DOWNLOADING", comment: "")
         }
         return ""
@@ -150,7 +151,11 @@ class AboutViewController: UITableViewController {
         
         if indexPath.section == 0 {
             if indexPath.row == 0 {
+                cell?.textLabel?.text = NSLocalizedString("SUPPORT", comment: "")
+                cell?.accessoryType = .DisclosureIndicator
+            } else if indexPath.row == 1 {
                 cell?.textLabel?.text = NSLocalizedString("RATE_ON_STORE", comment: "")
+                cell?.accessoryType = .DisclosureIndicator
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
@@ -159,8 +164,6 @@ class AboutViewController: UITableViewController {
                 cell2?.avatarImageView.image = UIImage(named: "MarcelAvatar")
                 return cell2!
             }
-        } else if indexPath.section == 2 {
-            
         }
 
         return cell!
@@ -168,47 +171,35 @@ class AboutViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
-            
+            if indexPath.row == 0 {
+                if MFMailComposeViewController.canSendMail() {
+                    let mailComposer = MFMailComposeViewController()
+                    mailComposer.mailComposeDelegate = self
+                    
+                    let device = UIDevice.currentDevice()
+                    let shortString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+                    let buildString = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+                    
+                    let subjectString = String(format: "Support PhoneBattery: %@ (%@)", shortString, buildString)
+                    let bodyString = String(format: "\n\n\n----\niOS Version: %@\nDevice: %@\n", device.systemVersion, device.model)
+                    mailComposer.setMessageBody(bodyString, isHTML: false)
+                    mailComposer.setSubject(subjectString)
+                    mailComposer.setToRecipients(["help@marcelvoss.com"])
+                    
+                    self.presentViewController(mailComposer, animated: true, completion: nil)
+                }
+            } else if indexPath.row == 1 {
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!)
+            }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://twitter.com/uimarcel")!)
             }
         }
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
 }

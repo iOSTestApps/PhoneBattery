@@ -10,12 +10,17 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PhoneBattery_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="Label" id="VHD-5w-nIS">
-                            <fontDescription key="font" type="system" pointSize="22"/>
-                        </label>
-                        <label height="20" alignment="center" verticalAlignment="center" text="Charging" id="8u1-cd-5eg"/>
+                        <group width="1" height="132" alignment="left" verticalAlignment="center" backgroundImage="frame0" contentMode="scaleAspectFit" layout="vertical" id="XZE-wb-Qh9">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="VHD-5w-nIS">
+                                    <fontDescription key="font" type="system" pointSize="26"/>
+                                </label>
+                                <label height="20" alignment="center" verticalAlignment="center" text="Charging" id="8u1-cd-5eg"/>
+                            </items>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="groupItem" destination="XZE-wb-Qh9" id="zMQ-IV-tfh"/>
                         <outlet property="percentageLabel" destination="VHD-5w-nIS" id="brb-Dm-bLF"/>
                         <outlet property="statusLabel" destination="8u1-cd-5eg" id="yG4-Wf-jal"/>
                     </connections>
@@ -28,10 +33,13 @@
             <objects>
                 <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="PhoneBattery_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="gv7-I2-MZq"/>
-                        <group alignment="left" layout="vertical" id="eew-Gs-W6Y">
+                        <group alignment="left" id="gv7-I2-MZq">
                             <items>
-                                <label alignment="center" text="Phone Battery" id="WYK-D0-EBq"/>
+                                <label alignment="center" verticalAlignment="center" text="Phone Battery" id="WYK-D0-EBq"/>
+                            </items>
+                        </group>
+                        <group alignment="left" backgroundImage="frame0" contentMode="scaleAspectFit" layout="vertical" id="eew-Gs-W6Y">
+                            <items>
                                 <label alignment="center" verticalAlignment="center" text="Label" id="Ctq-ON-Tcg">
                                     <fontDescription key="font" type="system" pointSize="19"/>
                                 </label>
@@ -41,6 +49,7 @@
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
+                        <outlet property="groupItem" destination="eew-Gs-W6Y" id="q4m-bj-Vor"/>
                         <outlet property="percentageLabel" destination="Ctq-ON-Tcg" id="IsN-CF-OsG"/>
                         <outlet property="statusLabel" destination="FTh-Ce-Fcv" id="EUu-ms-t6P"/>
                         <outlet property="titleLabel" destination="WYK-D0-EBq" id="DMJ-Sv-xar"/>

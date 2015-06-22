@@ -20,11 +20,20 @@ class GlanceController: WKInterfaceController {
     @IBOutlet weak var percentageLabel: WKInterfaceLabel!
     @IBOutlet weak var statusLabel: WKInterfaceLabel!
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
+    @IBOutlet weak var groupItem: WKInterfaceGroup!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        
+        device.batteryMonitoringEnabled = true
+        batteryLevel = device.batteryLevel
+        batteryState = device.batteryState
+        
+        groupItem.setBackgroundImageNamed("frame-")
+        groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(batteryLevel!)), duration: 1, repeatCount: 1)
+        print(batteryLevel)
     }
     
     override func willActivate() {
@@ -42,7 +51,6 @@ class GlanceController: WKInterfaceController {
         percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
         statusLabel.setText(self.stringForBatteryState(batteryState))
         titleLabel.setText(NSLocalizedString("PHONE_BATTERY", comment: ""))
-        
     }
     
     override func didDeactivate() {
@@ -66,7 +74,7 @@ class GlanceController: WKInterfaceController {
     func batteryLevelChanged(notification: NSNotification) {
         batteryLevel = device.batteryLevel
         
-        statusLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
+        percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
     }
     
     func batteryStateChanged(notification: NSNotification) {

@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class AboutViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+class AboutViewController: UITableViewController, MFMailComposeViewControllerDelegate, UIScrollViewDelegate {
     
     override init(style: UITableViewStyle) {
         super.init(style: style)
@@ -26,7 +26,10 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = NSLocalizedString("ABOUT", comment: "")
+        self.title = NSLocalizedString("WELCOME", comment: "")
+        self.navigationController?.navigationBar.tintColor = UIColor(red:0, green:0.86, blue:0.55, alpha:1)
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.view.window?.tintColor = UIColor(red:0, green:0.86, blue:0.55, alpha:1)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "sharePressed:")
         
@@ -81,8 +84,6 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         
         visualEffectView.addConstraint(NSLayoutConstraint(item: versionLabel, attribute: .Left, relatedBy: .Equal, toItem: nameLabel, attribute: .Left, multiplier: 1.0, constant: 0))
         
-        
-        
         self.tableView.tableHeaderView = headerView
         
         
@@ -104,13 +105,61 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         let blurEffect = UIBlurEffect(style: .Dark)
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView.frame = UIScreen.mainScreen().bounds
+        visualEffectView.alpha = 0
         self.navigationController?.view.window?.addSubview(visualEffectView)
+        
+        self.setNeedsStatusBarAppearanceUpdate()
+        
+        let scrollView = UIScrollView()
+        scrollView.pagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, self.view.frame.size.height - 50)
+        scrollView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        visualEffectView.addSubview(scrollView)
+        
+        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .CenterX, relatedBy: .Equal, toItem: visualEffectView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .CenterY, relatedBy: .Equal, toItem: visualEffectView, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        
+        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Width, relatedBy: .Equal, toItem: visualEffectView, attribute: .Width, multiplier: 1.0, constant: 0))
+        
+        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: self.view.frame.size.height - 50))
+        
+        
+        let pageControl = UIPageControl()
+        pageControl.numberOfPages = 2
+        pageControl.currentPage = 0
+        pageControl.setTranslatesAutoresizingMaskIntoConstraints(false)
+        visualEffectView.addSubview(pageControl)
+        
+        visualEffectView.addConstraint(NSLayoutConstraint(item: pageControl, attribute: .CenterX, relatedBy: .Equal, toItem: visualEffectView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        visualEffectView.addConstraint(NSLayoutConstraint(item: pageControl, attribute: .Top, relatedBy: .Equal, toItem: scrollView, attribute: .Bottom, multiplier: 1.0, constant: 5))
+        
+        
+        
+        let imageView1 = UIImageView(image: UIImage(named: "WatchImage1"))
+        imageView1.frame = CGRectMake(150, scrollView.frame.origin.y + 50, 200, 200)
+        imageView1.contentMode = UIViewContentMode.ScaleAspectFit
+        scrollView.addSubview(imageView1)
+    
+        
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            visualEffectView.alpha = 1
+        }) { (finished) -> Void in
+            
+        }
     }
     
     func sharePressed(barButton: UIBarButtonItem) {
         let activityVC = UIActivityViewController(activityItems: ["PhoneBattery is a simple way to check your phone's battery on your Apple Watch!", NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!], applicationActivities: nil)
         
         self.presentViewController(activityVC, animated: true, completion: nil)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 
     // MARK: - Table view data source
@@ -139,11 +188,28 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         return ""
     }
     
-    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == 1 {
-            return NSLocalizedString("THANKS_DOWNLOADING", comment: "")
+            var headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 20))
+            
+            let thanksLabel = UILabel()
+            thanksLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+            thanksLabel.text = NSLocalizedString("THANKS_DOWNLOADING", comment: "")
+            thanksLabel.textAlignment = .Center
+            thanksLabel.font = UIFont.systemFontOfSize(12)
+            thanksLabel.numberOfLines = 0
+            thanksLabel.textColor = UIColor(red:0.48, green:0.48, blue:0.5, alpha:1)
+            headerView.addSubview(thanksLabel)
+            
+            headerView.addConstraint(NSLayoutConstraint(item: thanksLabel, attribute: .CenterX, relatedBy: .Equal, toItem: headerView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+            
+            headerView.addConstraint(NSLayoutConstraint(item: thanksLabel, attribute: .Top, relatedBy: .Equal, toItem: headerView, attribute: .Top, multiplier: 1.0, constant: 5))
+            
+            headerView.addConstraint(NSLayoutConstraint(item: thanksLabel, attribute: .Width, relatedBy: .Equal, toItem: headerView, attribute: .Width, multiplier: 1.0, constant: -50))
+            
+            return headerView
         }
-        return ""
+        return nil
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -178,7 +244,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 cell2?.nameLabel.text = "Marcel Voss"
-                cell2?.jobLabel.text = "Code & Design"
+                cell2?.jobLabel.text = NSLocalizedString("JOB_TITLE", comment: "")
                 cell2?.avatarImageView.image = UIImage(named: "MarcelAvatar")
                 return cell2!
             }
@@ -190,8 +256,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                // Introduction
-            } else if indexPath.row == 1 {
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
                 if MFMailComposeViewController.canSendMail() {
                     let mailComposer = MFMailComposeViewController()
                     mailComposer.mailComposeDelegate = self
@@ -208,11 +273,15 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                     
                     self.presentViewController(mailComposer, animated: true, completion: nil)
                 }
+            } else if indexPath.row == 1 {
+                self.showIntroduction()
             } else if indexPath.row == 2 {
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
                 UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!)
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://twitter.com/uimarcel")!)
             }
         }

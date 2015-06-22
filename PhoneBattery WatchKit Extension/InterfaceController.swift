@@ -18,11 +18,20 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var percentageLabel: WKInterfaceLabel!
     @IBOutlet weak var statusLabel: WKInterfaceLabel!
+    @IBOutlet weak var groupItem: WKInterfaceGroup!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        
+        device.batteryMonitoringEnabled = true
+        batteryLevel = device.batteryLevel
+        batteryState = device.batteryState
+        
+        groupItem.setBackgroundImageNamed("frame-")
+        groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(batteryLevel!)), duration: 1, repeatCount: 1)
+        print(batteryLevel)
     }
 
     override func willActivate() {
@@ -33,13 +42,13 @@ class InterfaceController: WKInterfaceController {
         batteryLevel = device.batteryLevel
         batteryState = device.batteryState
         
+        
         // KVO for oberserving battery level and state
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "batteryLevelChanged:", name: UIDeviceBatteryLevelDidChangeNotification, object: device)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "batteryStateChanged:", name: UIDeviceBatteryStateDidChangeNotification, object: device)
 
         percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
         statusLabel.setText(self.stringForBatteryState(batteryState))
-        
     }
 
     override func didDeactivate() {
@@ -62,6 +71,8 @@ class InterfaceController: WKInterfaceController {
     
     func batteryLevelChanged(notification: NSNotification) {
         batteryLevel = device.batteryLevel
+        
+        //groupItem.startAnimatingWithImagesInRange(NSRange(location: 0, length: 50), duration: 1, repeatCount: 1)
         
         statusLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
     }

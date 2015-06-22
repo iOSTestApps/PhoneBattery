@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
         
-        let navController = UINavigationController(rootViewController: MainViewController(style: UITableViewStyle.Grouped))
+        let navController = UINavigationController(rootViewController: AboutViewController(style: UITableViewStyle.Grouped))
         self.window?.rootViewController = navController
         
         self.window!.backgroundColor = UIColor.whiteColor()

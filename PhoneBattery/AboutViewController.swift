@@ -85,11 +85,26 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         
         self.tableView.tableHeaderView = headerView
         
+        
+        if NSUserDefaults.standardUserDefaults().boolForKey("hasLaunchedBefore") {
+            self.showIntroduction()
+            
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLaunchedBefore")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func showIntroduction() {
+        let blurEffect = UIBlurEffect(style: .Dark)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView.frame = UIScreen.mainScreen().bounds
+        self.navigationController?.view.window?.addSubview(visualEffectView)
     }
     
     func sharePressed(barButton: UIBarButtonItem) {
@@ -108,7 +123,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         if section == 0 {
-            return 2
+            return 3
         } else if section == 1 {
             return 1
         }
@@ -150,10 +165,13 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         }
         
         if indexPath.section == 0 {
-            if indexPath.row == 0 {
+            if indexPath.row == 0   {
                 cell?.textLabel?.text = NSLocalizedString("SUPPORT", comment: "")
                 cell?.accessoryType = .DisclosureIndicator
             } else if indexPath.row == 1 {
+                cell?.textLabel?.text = NSLocalizedString("INTRODUCTION", comment: "")
+                cell?.accessoryType = .DisclosureIndicator
+            } else if indexPath.row == 2 {
                 cell?.textLabel?.text = NSLocalizedString("RATE_ON_STORE", comment: "")
                 cell?.accessoryType = .DisclosureIndicator
             }
@@ -172,6 +190,8 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
+                // Introduction
+            } else if indexPath.row == 1 {
                 if MFMailComposeViewController.canSendMail() {
                     let mailComposer = MFMailComposeViewController()
                     mailComposer.mailComposeDelegate = self
@@ -188,7 +208,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                     
                     self.presentViewController(mailComposer, animated: true, completion: nil)
                 }
-            } else if indexPath.row == 1 {
+            } else if indexPath.row == 2 {
                 UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!)
             }
         } else if indexPath.section == 1 {

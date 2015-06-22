@@ -22,7 +22,6 @@
 		1FC721161B3440E800F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721151B3440E800F9DDEA /* Images.xcassets */; };
 		1FC721191B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FC720FF1B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FC721221B3440F700F9DDEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721211B3440F700F9DDEA /* Localizable.strings */; };
-		1FC721241B34410300F9DDEA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC721231B34410300F9DDEA /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		1FC721131B3440E800F9DDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1FC721151B3440E800F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FC721211B3440F700F9DDEA /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		1FC721231B34410300F9DDEA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +121,6 @@
 		1FA8EC391B37043F001BEE4B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1FC721231B34410300F9DDEA /* MainViewController.swift */,
 				1FA8EC341B36FE7C001BEE4B /* AboutViewController.swift */,
 			);
 			name = "View Controllers";
@@ -394,7 +391,6 @@
 				1FA8EC371B370439001BEE4B /* CreatorTableViewCell.swift in Sources */,
 				1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */,
 				1FA8EC351B36FE7C001BEE4B /* AboutViewController.swift in Sources */,
-				1FC721241B34410300F9DDEA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

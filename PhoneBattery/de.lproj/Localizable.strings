@@ -27,3 +27,10 @@
 "MORE" = "Mehr";
 
 "BATTERY" = "Akku";
+
+"INTRODUCTION_GREETING" = "Hallo";
+"INTRODUCTION_DESCRIPTION_1" = "PhoneBattery ist ein simples Tool, dass dir erlaubt den Akkustand deines iPhones auf deiner Apple Watch abzurufen.";
+"INTRODUCTION_DESCRIPTION_2" = "Ein einfaches Interface, damit du so schnell wie möglich deinen Akkustand abrufen kannst.";
+"INTRODUCTION_DESCRIPTION_3" = "Bekomme noch schneller Zugriff auf deinen Akkustand mit einer Glance!";
+
+"CLOSE" = "Fertig";

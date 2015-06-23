@@ -27,3 +27,10 @@
 "MORE" = "More";
 
 "BATTERY" = "Battery";
+
+"INTRODUCTION_GREETING" = "Hello";
+"INTRODUCTION_DESCRIPTION_1" = "PhoneBattery is a simply utility that allows you to check your phone's battery level on your Apple Watch.";
+"INTRODUCTION_DESCRIPTION_2" = "A clean interface to access your battery level very quick.";
+"INTRODUCTION_DESCRIPTION_3" = "Get even quicker access to your battery level with a Glance!";
+
+"CLOSE" = "Done";

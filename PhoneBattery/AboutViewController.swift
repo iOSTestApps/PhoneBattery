@@ -11,6 +11,8 @@ import MessageUI
 
 class AboutViewController: UITableViewController, MFMailComposeViewControllerDelegate, UIScrollViewDelegate {
     
+    var visualEffectView : UIVisualEffectView?
+    
     override init(style: UITableViewStyle) {
         super.init(style: style)
     }
@@ -103,52 +105,156 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     
     func showIntroduction() {
         let blurEffect = UIBlurEffect(style: .Dark)
-        let visualEffectView = UIVisualEffectView(effect: blurEffect)
-        visualEffectView.frame = UIScreen.mainScreen().bounds
-        visualEffectView.alpha = 0
-        self.navigationController?.view.window?.addSubview(visualEffectView)
+        visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView!.frame = UIScreen.mainScreen().bounds
+        visualEffectView!.alpha = 0
+        self.navigationController?.view.window?.addSubview(visualEffectView!)
+    
         
-        self.setNeedsStatusBarAppearanceUpdate()
+        let screenHeight = UIScreen.mainScreen().bounds.size.height
         
         let scrollView = UIScrollView()
         scrollView.pagingEnabled = true
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, self.view.frame.size.height - 50)
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.contentSize = CGSizeMake(self.view.frame.size.width, screenHeight * 3)
         scrollView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        visualEffectView.addSubview(scrollView)
+        visualEffectView!.addSubview(scrollView)
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .CenterX, relatedBy: .Equal, toItem: visualEffectView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .CenterX, relatedBy: .Equal, toItem: visualEffectView!, attribute: .CenterX, multiplier: 1.0, constant: 0))
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .CenterY, relatedBy: .Equal, toItem: visualEffectView, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .CenterY, relatedBy: .Equal, toItem: visualEffectView!, attribute: .CenterY, multiplier: 1.0, constant: 0))
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Width, relatedBy: .Equal, toItem: visualEffectView, attribute: .Width, multiplier: 1.0, constant: 0))
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Width, relatedBy: .Equal, toItem: visualEffectView!, attribute: .Width, multiplier: 1.0, constant: 0))
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: self.view.frame.size.height - 50))
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .Equal, toItem: visualEffectView!, attribute: .Height, multiplier: 1.0, constant: 0))
         
         
-        let pageControl = UIPageControl()
-        pageControl.numberOfPages = 2
-        pageControl.currentPage = 0
-        pageControl.setTranslatesAutoresizingMaskIntoConstraints(false)
-        visualEffectView.addSubview(pageControl)
+        let firstDescription = UILabel()
+        firstDescription.setTranslatesAutoresizingMaskIntoConstraints(false)
+        firstDescription.textColor = UIColor.whiteColor()
+        firstDescription.textAlignment = .Center
+        firstDescription.numberOfLines = 0
+        firstDescription.font = UIFont.systemFontOfSize(18)
+        firstDescription.text = NSLocalizedString("INTRODUCTION_DESCRIPTION_1", comment: "")
+        scrollView.addSubview(firstDescription)
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: pageControl, attribute: .CenterX, relatedBy: .Equal, toItem: visualEffectView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: firstDescription, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 0))
         
-        visualEffectView.addConstraint(NSLayoutConstraint(item: pageControl, attribute: .Top, relatedBy: .Equal, toItem: scrollView, attribute: .Bottom, multiplier: 1.0, constant: 5))
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: firstDescription, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1.0, constant: 20))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: firstDescription, attribute: .Width, relatedBy: .Equal, toItem: visualEffectView, attribute: .Width, multiplier: 1.0, constant: -80))
+        
+        
+        let firstTitle = UILabel()
+        firstTitle.setTranslatesAutoresizingMaskIntoConstraints(false)
+        firstTitle.textColor = UIColor.whiteColor()
+        firstTitle.textAlignment = .Center
+        firstTitle.numberOfLines = 0
+        firstTitle.font = UIFont.boldSystemFontOfSize(25)
+        firstTitle.text = NSLocalizedString("INTRODUCTION_GREETING", comment: "")
+        scrollView.addSubview(firstTitle)
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: firstTitle, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: firstTitle, attribute: .Bottom, relatedBy: .Equal, toItem: firstDescription, attribute: .Top, multiplier: 1.0, constant: -20))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: firstTitle, attribute: .Width, relatedBy: .Equal, toItem: visualEffectView!, attribute: .Width, multiplier: 1.0, constant: -80))
+        
         
         
         
         let imageView1 = UIImageView(image: UIImage(named: "WatchImage1"))
-        imageView1.frame = CGRectMake(150, scrollView.frame.origin.y + 50, 200, 200)
+        imageView1.setTranslatesAutoresizingMaskIntoConstraints(false)
         imageView1.contentMode = UIViewContentMode.ScaleAspectFit
         scrollView.addSubview(imageView1)
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView1, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView1, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1.0, constant: -50 + screenHeight))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView1, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 200))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView1, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 200))
+        
+        
+        let secondDescription = UILabel()
+        secondDescription.setTranslatesAutoresizingMaskIntoConstraints(false)
+        secondDescription.textColor = UIColor.whiteColor()
+        secondDescription.textAlignment = .Center
+        secondDescription.numberOfLines = 0
+        secondDescription.font = UIFont.systemFontOfSize(18)
+        secondDescription.text = NSLocalizedString("INTRODUCTION_DESCRIPTION_2", comment: "")
+        scrollView.addSubview(secondDescription)
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: secondDescription, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: secondDescription, attribute: .Top, relatedBy: .Equal, toItem: imageView1, attribute: .Bottom, multiplier: 1.0, constant: 20))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: secondDescription, attribute: .Width, relatedBy: .Equal, toItem: visualEffectView!, attribute: .Width, multiplier: 1.0, constant: -80))
+        
+        
+        let imageView2 = UIImageView(image: UIImage(named: "WatchImage2"))
+        imageView2.setTranslatesAutoresizingMaskIntoConstraints(false)
+        imageView2.contentMode = UIViewContentMode.ScaleAspectFit
+        scrollView.addSubview(imageView2)
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView2, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView2, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1.0, constant: -50 + screenHeight * 2))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView2, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 200))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView2, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 200))
+        
+        
+        let thirdDescription = UILabel()
+        thirdDescription.setTranslatesAutoresizingMaskIntoConstraints(false)
+        thirdDescription.textColor = UIColor.whiteColor()
+        thirdDescription.textAlignment = .Center
+        thirdDescription.numberOfLines = 0
+        thirdDescription.font = UIFont.systemFontOfSize(18)
+        thirdDescription.text = NSLocalizedString("INTRODUCTION_DESCRIPTION_3", comment: "")
+        scrollView.addSubview(thirdDescription)
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: thirdDescription, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: thirdDescription, attribute: .Top, relatedBy: .Equal, toItem: imageView2, attribute: .Bottom, multiplier: 1.0, constant: 20))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: thirdDescription, attribute: .Width, relatedBy: .Equal, toItem: visualEffectView!, attribute: .Width, multiplier: 1.0, constant: -80))
+        
+        
+        
+        let closeButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        closeButton.setTitle(NSLocalizedString("CLOSE", comment: ""), forState: .Normal)
+        closeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(16)
+        closeButton.layer.cornerRadius = 14
+        closeButton.backgroundColor = UIColor.whiteColor()
+        closeButton.addTarget(self, action: "closeIntroduction", forControlEvents: UIControlEvents.TouchUpInside)
+        closeButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        scrollView.addSubview(closeButton)
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: closeButton, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 0))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: closeButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 45))
+        
+        visualEffectView!.addConstraint(NSLayoutConstraint(item: closeButton, attribute: .Bottom, relatedBy: .Equal, toItem: scrollView, attribute: .Bottom, multiplier: 1.0, constant: -30 + screenHeight * 3))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: closeButton, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1.0, constant: -40))
     
         
         
         UIView.animateWithDuration(0.3, animations: { () -> Void in
-            visualEffectView.alpha = 1
+            self.visualEffectView!.alpha = 1
         }) { (finished) -> Void in
             
+        }
+    }
+    
+    func closeIntroduction() {
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.visualEffectView!.alpha = 0
+            }) { (finished) -> Void in
+                self.visualEffectView?.removeFromSuperview()
         }
     }
     
@@ -156,10 +262,6 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         let activityVC = UIActivityViewController(activityItems: [NSLocalizedString("SHARE_TITLE", comment: ""), NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!], applicationActivities: nil)
         
         self.presentViewController(activityVC, animated: true, completion: nil)
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
     }
 
     // MARK: - Table view data source
@@ -285,6 +387,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                 }
             } else if indexPath.row == 1 {
                 self.showIntroduction()
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
             } else if indexPath.row == 2 {
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
                 UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!)

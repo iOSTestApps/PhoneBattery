@@ -17,7 +17,6 @@ class GlanceController: WKInterfaceController {
     var batteryState : UIDeviceBatteryState!
     //var currentLevel : Int?
     
-    
     @IBOutlet weak var percentageLabel: WKInterfaceLabel!
     @IBOutlet weak var statusLabel: WKInterfaceLabel!
     @IBOutlet weak var titleLabel: WKInterfaceLabel!

@@ -33,19 +33,17 @@ class InterfaceController: WKInterfaceController {
         
         groupItem.setBackgroundImageNamed("frame-")
         groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)), duration: 1, repeatCount: 1)
-        
-        println(Int(level))
-        print(batteryLevel! * 100)
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        self.setTitle(NSLocalizedString("Battery", comment: ""))
+        
         device.batteryMonitoringEnabled = true
         batteryLevel = device.batteryLevel
         batteryState = device.batteryState
-        
         
         // KVO for oberserving battery level and state
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "batteryLevelChanged:", name: UIDeviceBatteryLevelDidChangeNotification, object: device)
@@ -74,10 +72,19 @@ class InterfaceController: WKInterfaceController {
     }
     
     func batteryLevelChanged(notification: NSNotification) {
+        let oldLevel = batteryLevel!
         batteryLevel = device.batteryLevel
+        
+        let newLevel = Int(batteryLevel!) * 100
+        let oldIntLevel = Int(oldLevel) * 100
+        
+        println("Old: \(oldLevel)\nNew: \(newLevel)")
+        
+        // TODO: Should update dynamically
+        
         percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
         
-        //groupItem.startAnimatingWithImagesInRange(NSRange(location: 0, length: 50), duration: 1, repeatCount: 1)
+        groupItem.startAnimatingWithImagesInRange(NSRange(location: oldIntLevel, length: newLevel), duration: 1, repeatCount: 1)
     }
     
     func batteryStateChanged(notification: NSNotification) {

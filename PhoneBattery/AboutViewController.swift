@@ -26,18 +26,6 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let device = UIDevice.currentDevice()
-        var batteryLevel : Float?
-        var batteryState : UIDeviceBatteryState!
-        
-        device.batteryMonitoringEnabled = true
-        batteryLevel = device.batteryLevel
-        batteryState = device.batteryState
-        
-        let level = batteryLevel! * 100
-        println(batteryLevel! * 100)
-        println(Int(level))
-
         self.title = NSLocalizedString("WELCOME", comment: "")
         self.navigationController?.navigationBar.tintColor = UIColor(red:0, green:0.86, blue:0.55, alpha:1)
         self.navigationController?.navigationBar.translucent = false
@@ -206,7 +194,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == 2 {
-            var headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 20))
+            var headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 30))
             
             let thanksLabel = UILabel()
             thanksLabel.setTranslatesAutoresizingMaskIntoConstraints(false)

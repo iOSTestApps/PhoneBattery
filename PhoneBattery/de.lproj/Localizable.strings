@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  PhoneBattery
+
+  Created by Marcel Voss on 19.06.15.
+  Copyright (c) 2015 Marcel Voss. All rights reserved.
+*/
+
+"CHARGING" = "Lädt";
+"REMAINING" = "Verbleibend";
+"UNKNOWN" = "Unbekannt";
+"FULL" = "Voll";
+
+"PHONE_BATTERY" = "Phone Battery";
+"HELP" = "Hilfe";
+"WELCOME" = "Willkommen";
+"RATE_ON_STORE" = "Im App Store bewerten";
+"WHO_MADE_THIS" = "Macher";
+"THANKS_DOWNLOADING" = "Danke für's herunterladen und verwenden von PhoneBattery! <3";
+"SUPPORT" = "Support";
+"GENERAL" = "Allgemein";
+"INTRODUCTION" = "Einführung";
+"JOB_TITLE" = "Code & Design";
+"SHARE_TITLE" = "PhoneBattery ist eine einfache Möglichkeit um den Akkustand deines iPhones auf deiner Apple Watch anzuzeigen!";
+
+"AVAILABLE_GITHUB" = "Vefügbar auf GitHub";
+"MORE" = "Mehr";
+
+"BATTERY" = "Akku";

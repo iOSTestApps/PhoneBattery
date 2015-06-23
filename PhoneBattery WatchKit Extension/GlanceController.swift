@@ -36,9 +36,6 @@ class GlanceController: WKInterfaceController {
         
         groupItem.setBackgroundImageNamed("frame-")
         groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)), duration: 1, repeatCount: 1)
-        
-        println(Int(level))
-        print(batteryLevel! * 100)
     }
     
     override func willActivate() {

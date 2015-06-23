@@ -349,6 +349,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
+                cell2 = CreatorTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellIdentifier2")
                 cell2?.nameLabel.text = "Marcel Voss"
                 cell2?.jobLabel.text = NSLocalizedString("JOB_TITLE", comment: "")
                 cell2?.avatarImageView.image = UIImage(named: "MarcelAvatar")

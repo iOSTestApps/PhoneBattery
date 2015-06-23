@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PhoneBattery_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" height="132" alignment="left" verticalAlignment="center" backgroundImage="frame0" contentMode="scaleAspectFit" layout="vertical" id="XZE-wb-Qh9">
+                        <group width="1" height="132" alignment="left" verticalAlignment="center" backgroundImage="frame-0" contentMode="scaleAspectFit" layout="vertical" id="XZE-wb-Qh9">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="Label" id="VHD-5w-nIS">
                                     <fontDescription key="font" type="system" pointSize="26"/>
@@ -38,7 +38,7 @@
                                 <label alignment="center" verticalAlignment="center" text="Phone Battery" id="WYK-D0-EBq"/>
                             </items>
                         </group>
-                        <group alignment="left" backgroundImage="frame0" contentMode="scaleAspectFit" layout="vertical" id="eew-Gs-W6Y">
+                        <group alignment="left" backgroundImage="frame-0" contentMode="scaleAspectFit" layout="vertical" id="eew-Gs-W6Y">
                             <items>
                                 <label alignment="center" verticalAlignment="center" text="Label" id="Ctq-ON-Tcg">
                                     <fontDescription key="font" type="system" pointSize="19"/>

@@ -29,9 +29,13 @@ class InterfaceController: WKInterfaceController {
         batteryLevel = device.batteryLevel
         batteryState = device.batteryState
         
+        let level = batteryLevel! * 100
+        
         groupItem.setBackgroundImageNamed("frame-")
-        groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(batteryLevel!)), duration: 1, repeatCount: 1)
-        print(batteryLevel)
+        groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)), duration: 1, repeatCount: 1)
+        
+        println(Int(level))
+        print(batteryLevel! * 100)
     }
 
     override func willActivate() {
@@ -71,26 +75,14 @@ class InterfaceController: WKInterfaceController {
     
     func batteryLevelChanged(notification: NSNotification) {
         batteryLevel = device.batteryLevel
+        percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
         
         //groupItem.startAnimatingWithImagesInRange(NSRange(location: 0, length: 50), duration: 1, repeatCount: 1)
-        
-        statusLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
     }
     
     func batteryStateChanged(notification: NSNotification) {
         batteryState = device.batteryState
-        
-        if batteryState == UIDeviceBatteryState.Full {
-            
-        } else if batteryState == UIDeviceBatteryState.Charging {
-            
-        } else if batteryState == UIDeviceBatteryState.Unplugged {
-            
-        } else {
-            // State is unknown
-            
-        }
-        
+        stringForBatteryState(batteryState)
     }
 
 }

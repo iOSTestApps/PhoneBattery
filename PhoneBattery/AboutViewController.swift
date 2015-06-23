@@ -25,6 +25,18 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let device = UIDevice.currentDevice()
+        var batteryLevel : Float?
+        var batteryState : UIDeviceBatteryState!
+        
+        device.batteryMonitoringEnabled = true
+        batteryLevel = device.batteryLevel
+        batteryState = device.batteryState
+        
+        let level = batteryLevel! * 100
+        println(batteryLevel! * 100)
+        println(Int(level))
 
         self.title = NSLocalizedString("WELCOME", comment: "")
         self.navigationController?.navigationBar.tintColor = UIColor(red:0, green:0.86, blue:0.55, alpha:1)
@@ -153,7 +165,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     }
     
     func sharePressed(barButton: UIBarButtonItem) {
-        let activityVC = UIActivityViewController(activityItems: ["PhoneBattery is a simple way to check your phone's battery on your Apple Watch!", NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: [NSLocalizedString("SHARE_TITLE", comment: ""), NSURL(string: "https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8")!], applicationActivities: nil)
         
         self.presentViewController(activityVC, animated: true, completion: nil)
     }
@@ -166,7 +178,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
-        return 2
+        return 3
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -174,6 +186,8 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         if section == 0 {
             return 3
         } else if section == 1 {
+            return 1
+        } else if section == 2 {
             return 1
         }
         return 0
@@ -184,12 +198,14 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
             return NSLocalizedString("GENERAL", comment: "").uppercaseString
         } else if section == 1 {
             return NSLocalizedString("WHO_MADE_THIS", comment: "").uppercaseString
+        } else if section == 2 {
+            return NSLocalizedString("MORE", comment: "").uppercaseString
         }
         return ""
     }
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        if section == 1 {
+        if section == 2 {
             var headerView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 20))
             
             let thanksLabel = UILabel()
@@ -248,6 +264,11 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                 cell2?.avatarImageView.image = UIImage(named: "MarcelAvatar")
                 return cell2!
             }
+        } else if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                cell?.textLabel?.text = NSLocalizedString("AVAILABLE_GITHUB", comment: "")
+                cell?.accessoryType = .DisclosureIndicator
+            }
         }
 
         return cell!
@@ -260,6 +281,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                 if MFMailComposeViewController.canSendMail() {
                     let mailComposer = MFMailComposeViewController()
                     mailComposer.mailComposeDelegate = self
+                    mailComposer.navigationBar.tintColor = UIColor(red:0, green:0.86, blue:0.55, alpha:1)
                     
                     let device = UIDevice.currentDevice()
                     let shortString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
@@ -283,6 +305,11 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
             if indexPath.row == 0 {
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://twitter.com/uimarcel")!)
+            }
+        } else if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/marcelvoss/PhoneBattery")!)
             }
         }
     }

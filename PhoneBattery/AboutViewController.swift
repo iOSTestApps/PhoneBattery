@@ -89,7 +89,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         self.tableView.tableHeaderView = headerView
         
         
-        if NSUserDefaults.standardUserDefaults().boolForKey("hasLaunchedBefore") {
+        if NSUserDefaults.standardUserDefaults().boolForKey("hasLaunchedBefore") != true {
             self.showIntroduction()
             
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLaunchedBefore")

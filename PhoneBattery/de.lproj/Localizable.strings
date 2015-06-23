@@ -7,7 +7,7 @@
 */
 
 "CHARGING" = "Lädt";
-"REMAINING" = "Verbleibend";
+"REMAINING" = "Übrig";
 "UNKNOWN" = "Unbekannt";
 "FULL" = "Voll";
 

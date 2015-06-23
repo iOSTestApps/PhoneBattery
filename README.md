@@ -1,4 +1,6 @@
-<center><img src="Preview/rounded_icon.png" alt="" width="150" height="150"/></center>
+<p align="center" >
+<img src="Preview/rounded_icon.png" alt="" width="150" height="150"/>
+</p>
 
 # PhoneBattery
 PhoneBattery is a simple utility that lets you check your phone's battery life on your Apple Watch.

@@ -15,24 +15,27 @@ class InterfaceController: WKInterfaceController {
     let device = UIDevice.currentDevice()
     var batteryLevel : Float?
     var batteryState : UIDeviceBatteryState!
-
+    
     @IBOutlet weak var percentageLabel: WKInterfaceLabel!
     @IBOutlet weak var statusLabel: WKInterfaceLabel!
     @IBOutlet weak var groupItem: WKInterfaceGroup!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
         // Configure interface objects here.
         
         device.batteryMonitoringEnabled = true
         batteryLevel = device.batteryLevel
         batteryState = device.batteryState
         
-        let level = batteryLevel! * 100
-        
         groupItem.setBackgroundImageNamed("frame-")
-        groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)), duration: 1, repeatCount: 1)
+        
+        let level = batteryLevel! * 100
+        if level > 0 {
+            groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)+1), duration: 1, repeatCount: 1)
+        } else {
+            groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)), duration: 1, repeatCount: 1)
+        }
     }
 
     override func willActivate() {
@@ -75,16 +78,10 @@ class InterfaceController: WKInterfaceController {
         let oldLevel = batteryLevel!
         batteryLevel = device.batteryLevel
         
-        let newLevel = Int(batteryLevel!) * 100
-        let oldIntLevel = Int(oldLevel) * 100
-        
-        println("Old: \(oldLevel)\nNew: \(newLevel)")
-        
-        // TODO: Should update dynamically
-        
+         let level = Int(batteryLevel!) * 100
         percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
         
-        groupItem.startAnimatingWithImagesInRange(NSRange(location: oldIntLevel, length: newLevel), duration: 1, repeatCount: 1)
+        groupItem.startAnimatingWithImagesInRange(NSRange(location: 0, length: level), duration: 1, repeatCount: 1)
     }
     
     func batteryStateChanged(notification: NSNotification) {

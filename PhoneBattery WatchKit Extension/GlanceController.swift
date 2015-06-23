@@ -31,10 +31,16 @@ class GlanceController: WKInterfaceController {
         batteryLevel = device.batteryLevel
         batteryState = device.batteryState
         
-        let level = batteryLevel! * 100
         
         groupItem.setBackgroundImageNamed("frame-")
-        groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)), duration: 1, repeatCount: 1)
+        
+        let level = batteryLevel! * 100
+        if level > 0 {
+            groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)+1), duration: 1, repeatCount: 1)
+        } else {
+            groupItem.startAnimatingWithImagesInRange(NSMakeRange(0, Int(level)), duration: 1, repeatCount: 1)
+        }
+        
     }
     
     override func willActivate() {
@@ -75,6 +81,9 @@ class GlanceController: WKInterfaceController {
     func batteryLevelChanged(notification: NSNotification) {
         batteryLevel = device.batteryLevel
         percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
+        
+        let level = Int(batteryLevel!) * 100
+        groupItem.startAnimatingWithImagesInRange(NSRange(location: 0, length: level), duration: 1, repeatCount: 1)
     }
     
     func batteryStateChanged(notification: NSNotification) {

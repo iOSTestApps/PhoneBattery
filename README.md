@@ -5,6 +5,8 @@
 # PhoneBattery
 PhoneBattery is a simple utility that lets you check your phone's battery life on your Apple Watch.
 
+So far it is localized to German, English and French.
+
 PhoneBattery is available on the [App Store](https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8)!
 
 ## Preview

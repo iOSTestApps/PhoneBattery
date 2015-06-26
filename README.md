@@ -3,11 +3,11 @@
 </p>
 
 # PhoneBattery
-PhoneBattery is a simple utility that lets you check your phone's battery life on your Apple Watch.
+PhoneBattery is a simple utility that lets you check your phone's battery life on your Apple Watch. It is very simple and doesn't do anything else than that.
 
-So far it is localized to German, English and French.
+This app is available in three languages: German, English and French (thanks to [@juliastic](https://github.com/juliastic) for localizing it).
 
-PhoneBattery is available on the [App Store](https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8)!
+PhoneBattery is also available for free on the [App Store](https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8)!
 
 ## Preview
 <img src="Preview/watch_1.jpg" alt="" height="300"/>
@@ -15,4 +15,4 @@ PhoneBattery is available on the [App Store](https://itunes.apple.com/us/app/pho
 <img src="Preview/phone_1.png" alt="" height="400"/>
 
 ## License
-MVDribbbleKit is available under the MIT license. See the [LICENSE](https://github.com/marcelvoss/PhoneBattery/blob/master/LICENSE.md) file for more information.
+PhoneBattery is available under the MIT license. See the [LICENSE](https://github.com/marcelvoss/PhoneBattery/blob/master/LICENSE.md) file for more information.

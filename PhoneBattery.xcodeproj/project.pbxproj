@@ -85,6 +85,8 @@
 		1FC721111B3440E800F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC721131B3440E800F9DDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1FC721151B3440E800F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FF54D261B3AC433009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Interface.strings; sourceTree = "<group>"; };
+		1FF54D271B3AC447009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +335,7 @@
 				en,
 				Base,
 				de,
+				fr,
 			);
 			mainGroup = 1FC720D21B3440E100F9DDEA;
 			productRefGroup = 1FC720DC1B3440E100F9DDEA /* Products */;
@@ -440,6 +443,7 @@
 			children = (
 				1F83509F1B3977FA00E65388 /* en */,
 				1F8350A21B39782A00E65388 /* de */,
+				1FF54D271B3AC447009664B5 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -449,6 +453,7 @@
 			children = (
 				1FC721131B3440E800F9DDEA /* Base */,
 				1F8350A11B39782A00E65388 /* de */,
+				1FF54D261B3AC433009664B5 /* fr */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";

@@ -104,6 +104,8 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     }
     
     func showIntroduction() {
+        
+        
         let blurEffect = UIBlurEffect(style: .Dark)
         visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView!.frame = UIScreen.mainScreen().bounds

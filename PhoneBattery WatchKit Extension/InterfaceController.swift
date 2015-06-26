@@ -75,10 +75,9 @@ class InterfaceController: WKInterfaceController {
     }
     
     func batteryLevelChanged(notification: NSNotification) {
-        let oldLevel = batteryLevel!
         batteryLevel = device.batteryLevel
         
-         let level = Int(batteryLevel!) * 100
+        let level = Int(batteryLevel!) * 100
         percentageLabel.setText(String(format: "%.f%%", batteryLevel! * 100))
         
         groupItem.startAnimatingWithImagesInRange(NSRange(location: 0, length: level), duration: 1, repeatCount: 1)

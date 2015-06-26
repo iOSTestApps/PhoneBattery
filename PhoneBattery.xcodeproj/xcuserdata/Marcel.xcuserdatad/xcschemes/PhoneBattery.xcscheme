@@ -72,7 +72,7 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      language = "de">
+      language = "fr">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference

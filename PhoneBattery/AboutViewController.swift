@@ -179,6 +179,62 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         visualEffectView!.addConstraint(NSLayoutConstraint(item: imageView1, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 200))
         
         
+        
+
+        let scrollLabel1 = UILabel()
+        scrollLabel1.text = NSLocalizedString("SWIPE_UP", comment: "")
+        scrollLabel1.textColor = UIColor.whiteColor()
+        scrollLabel1.textAlignment = .Center
+        scrollLabel1.setTranslatesAutoresizingMaskIntoConstraints(false)
+        scrollView.addSubview(scrollLabel1)
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: scrollLabel1, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 15))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: scrollLabel1, attribute: .Bottom, relatedBy: .Equal, toItem: scrollView, attribute: .Top, multiplier: 1.0, constant: (screenHeight * 1) - 25))
+        
+        
+        
+        let arrow1 = UIImageView(image: UIImage(named: "ArrowIcon"))
+        arrow1.setTranslatesAutoresizingMaskIntoConstraints(false)
+        arrow1.contentMode = .ScaleAspectFit
+        scrollView.addSubview(arrow1)
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: arrow1, attribute: .Right, relatedBy: .Equal, toItem: scrollLabel1, attribute: .Left, multiplier: 1.0, constant: -15))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: arrow1, attribute: .CenterY, relatedBy: .Equal, toItem: scrollLabel1, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: arrow1, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant:18))
+        
+        
+        
+        let scrollLabel2 = UILabel()
+        scrollLabel2.text = NSLocalizedString("SWIPE_UP", comment: "")
+        scrollLabel2.textColor = UIColor.whiteColor()
+        scrollLabel2.textAlignment = .Center
+        scrollLabel2.setTranslatesAutoresizingMaskIntoConstraints(false)
+        scrollView.addSubview(scrollLabel2)
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: scrollLabel2, attribute: .CenterX, relatedBy: .Equal, toItem: scrollView, attribute: .CenterX, multiplier: 1.0, constant: 15))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: scrollLabel2, attribute: .Bottom, relatedBy: .Equal, toItem: scrollView, attribute: .Top, multiplier: 1.0, constant: (screenHeight * 2) - 25))
+        
+        
+        
+        let arrow2 = UIImageView(image: UIImage(named: "ArrowIcon"))
+        arrow2.setTranslatesAutoresizingMaskIntoConstraints(false)
+        arrow2.contentMode = .ScaleAspectFit
+        scrollView.addSubview(arrow2)
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: arrow2, attribute: .Right, relatedBy: .Equal, toItem: scrollLabel2, attribute: .Left, multiplier: 1.0, constant: -15))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: arrow2, attribute: .CenterY, relatedBy: .Equal, toItem: scrollLabel2, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        
+        scrollView.addConstraint(NSLayoutConstraint(item: arrow2, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant:18))
+        
+        
+        
+        
+        
         let secondDescription = UILabel()
         secondDescription.setTranslatesAutoresizingMaskIntoConstraints(false)
         secondDescription.textColor = UIColor.whiteColor()

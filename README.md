@@ -9,7 +9,7 @@ This app is available in three languages: German, English and French (thanks to 
 
 PhoneBattery is also available for free on the [App Store](https://itunes.apple.com/us/app/phonebattery-your-phones-battery/id1009278300?ls=1&mt=8)!
 
-I had the idea for this in the plane back from WWDC to Germany, polished it and here it is.
+I had the idea for this on the plane back from WWDC to Germany, polished it at home and here it is now.
 
 ## Preview
 <img src="Preview/watch_1.jpg" alt="" height="300"/>

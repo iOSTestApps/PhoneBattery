@@ -11,7 +11,7 @@ PhoneBattery is also available for free on the [App Store](https://itunes.apple.
 
 I had the idea for this on the plane from WWDC back to Germany, polished it at home and here it is now.
 
-Also thanks to [Joe Dawson[(https://github.com/JoeDawson) who created PhoneBattery's gorgeous icon.
+Also thanks to [Joe Dawson](https://github.com/JoeDawson) who created PhoneBattery's gorgeous icon.
 
 ## Preview
 <img src="Preview/watch_1.jpg" alt="" height="300"/>

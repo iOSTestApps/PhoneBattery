@@ -66,6 +66,8 @@
 		1F3148E21B39A9E100AD0038 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		1F7C35951B4AD53200777EA6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		1F7C35961B4AD53200777EA6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1F7C35971B4ADFAB00777EA6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Interface.strings; sourceTree = "<group>"; };
+		1F7C35981B4ADFAB00777EA6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F83509F1B3977FA00E65388 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F8350A11B39782A00E65388 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		1F8350A21B39782A00E65388 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				de,
 				fr,
 				es,
+				it,
 			);
 			mainGroup = 1FC720D21B3440E100F9DDEA;
 			productRefGroup = 1FC720DC1B3440E100F9DDEA /* Products */;
@@ -449,6 +452,7 @@
 				1F8350A21B39782A00E65388 /* de */,
 				1FF54D271B3AC447009664B5 /* fr */,
 				1F7C35961B4AD53200777EA6 /* es */,
+				1F7C35981B4ADFAB00777EA6 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -460,6 +464,7 @@
 				1F8350A11B39782A00E65388 /* de */,
 				1FF54D261B3AC433009664B5 /* fr */,
 				1F7C35951B4AD53200777EA6 /* es */,
+				1F7C35971B4ADFAB00777EA6 /* it */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";

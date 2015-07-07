@@ -10,11 +10,12 @@ PhoneBattery is also **available for free** on the [App Store](https://itunes.ap
 I had the initial idea for this on the plane from WWDC back to Germany, polished it at home and here it is now. Please let me know what you think of it!
 
 ### Localization
-| Language |  Localizer   |
-|----------|--------------------------------------------- |
-| German   | [Marcel Voss](https://github.com/marcelvoss) |
-| French   | [Julia Grill](https://github.com/juliastic)  |
-| Spanish  | [Faisal Misle](https://github.com/fm)        |
+| Language |  Localizer                                      |
+|----------|------------------------------------------------ |
+| German   | [Marcel Voss](https://github.com/marcelvoss)    |
+| French   | [Julia Grill](https://github.com/juliastic)     |
+| Spanish  | [Faisal Misle](https://github.com/fm)           |
+| Italian  | [Giovanni Trezzi](https://twitter.com/yoller_)        |
 
 Thanks to everyone!
 

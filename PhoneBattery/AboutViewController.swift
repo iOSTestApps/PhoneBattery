@@ -105,6 +105,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     
     func showIntroduction() {
         
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
         
         let blurEffect = UIBlurEffect(style: .Dark)
         visualEffectView = UIVisualEffectView(effect: blurEffect)
@@ -311,6 +312,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     func closeIntroduction() {
         UIView.animateWithDuration(0.3, animations: { () -> Void in
                 self.visualEffectView!.alpha = 0
+                UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: true)
             }) { (finished) -> Void in
                 self.visualEffectView?.removeFromSuperview()
         }

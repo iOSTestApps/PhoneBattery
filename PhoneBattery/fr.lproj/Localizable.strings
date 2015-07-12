@@ -13,7 +13,7 @@
 "UNKNOWN" = "Inconnu";
 "FULL" = "Chargée";
 
-"PHONE_BATTERY" = "Batterie du portable";
+"PHONE_BATTERY" = "Batterie";
 "HELP" = "Aide";
 "WELCOME" = "Bienvenu";
 "RATE_ON_STORE" = "Notez PhoneBattery sur l'App Store";

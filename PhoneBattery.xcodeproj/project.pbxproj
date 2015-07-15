@@ -63,6 +63,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F2228AD1B563A4000383648 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		1F2228AE1B563A4000383648 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1F2228AF1B563A4600383648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
+		1F2228B01B563A4600383648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1F3148E21B39A9E100AD0038 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		1F7C35951B4AD53200777EA6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		1F7C35961B4AD53200777EA6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				fr,
 				es,
 				it,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 1FC720D21B3440E100F9DDEA;
 			productRefGroup = 1FC720DC1B3440E100F9DDEA /* Products */;
@@ -453,6 +459,8 @@
 				1FF54D271B3AC447009664B5 /* fr */,
 				1F7C35961B4AD53200777EA6 /* es */,
 				1F7C35981B4ADFAB00777EA6 /* it */,
+				1F2228AE1B563A4000383648 /* zh-Hans */,
+				1F2228B01B563A4600383648 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -465,6 +473,8 @@
 				1FF54D261B3AC433009664B5 /* fr */,
 				1F7C35951B4AD53200777EA6 /* es */,
 				1F7C35971B4ADFAB00777EA6 /* it */,
+				1F2228AD1B563A4000383648 /* zh-Hans */,
+				1F2228AF1B563A4600383648 /* zh-Hant */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";

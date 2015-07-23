@@ -7,7 +7,7 @@
 */
 
 "CHARGING" = "Charging";
-"REMAINING" = "Remaining";
+"REMAINING" = "Left";
 "UNKNOWN" = "Unknown";
 "FULL" = "Full";
 

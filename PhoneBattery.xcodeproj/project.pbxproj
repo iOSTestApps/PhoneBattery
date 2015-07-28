@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2F152B1B67BF970073F61A /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */; };
 		1F3148E31B39A9E100AD0038 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F3148E21B39A9E100AD0038 /* Launch Screen.xib */; };
 		1F83509D1B3977FA00E65388 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F8350A01B3977FA00E65388 /* Localizable.strings */; };
 		1F83509E1B3977FA00E65388 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F8350A01B3977FA00E65388 /* Localizable.strings */; };
@@ -67,6 +68,7 @@
 		1F2228AE1B563A4000383648 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1F2228AF1B563A4600383648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 		1F2228B01B563A4600383648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		1F3148E21B39A9E100AD0038 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		1F7C35951B4AD53200777EA6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		1F7C35961B4AD53200777EA6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2F152C1B67C0890073F61A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		1FA8EC381B37043D001BEE4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				1FC720E01B3440E100F9DDEA /* AppDelegate.swift */,
+				1F2F152C1B67C0890073F61A /* Helpers */,
 				1FA8EC391B37043F001BEE4B /* View Controllers */,
 				1FA8EC381B37043D001BEE4B /* Views */,
 				1FC720DE1B3440E100F9DDEA /* Supporting Files */,
@@ -408,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA8EC371B370439001BEE4B /* CreatorTableViewCell.swift in Sources */,
+				1F2F152B1B67BF970073F61A /* UIImage+Additions.swift in Sources */,
 				1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */,
 				1FA8EC351B36FE7C001BEE4B /* AboutViewController.swift in Sources */,
 			);

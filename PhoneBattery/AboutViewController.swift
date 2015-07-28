@@ -287,7 +287,8 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         closeButton.setTitle(NSLocalizedString("CLOSE", comment: ""), forState: .Normal)
         closeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(16)
         closeButton.layer.cornerRadius = 14
-        closeButton.backgroundColor = UIColor.whiteColor()
+        closeButton.layer.masksToBounds = true
+        closeButton.setBackgroundImage(UIImage.imageWithColor(UIColor.whiteColor()), forState: .Normal)
         closeButton.addTarget(self, action: "closeIntroduction", forControlEvents: UIControlEvents.TouchUpInside)
         closeButton.setTranslatesAutoresizingMaskIntoConstraints(false)
         scrollView.addSubview(closeButton)
@@ -338,7 +339,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         } else if section == 1 {
             return 1
         } else if section == 2 {
-            return 1
+            return 2
         }
         return 0
     }
@@ -417,6 +418,9 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
+                cell?.textLabel?.text = NSLocalizedString("PB_TWITTER", comment: "")
+                cell?.accessoryType = .DisclosureIndicator
+            } else if indexPath.row == 1 {
                 cell?.textLabel?.text = NSLocalizedString("AVAILABLE_GITHUB", comment: "")
                 cell?.accessoryType = .DisclosureIndicator
             }
@@ -460,6 +464,9 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
             }
         } else if indexPath.section == 2 {
             if indexPath.row == 0 {
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://twitter.com/phonebatteryapp")!)
+            } else if indexPath.row == 1 {
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
                 UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/marcelvoss/PhoneBattery")!)
             }

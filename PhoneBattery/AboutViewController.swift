@@ -443,7 +443,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                     let buildString = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
                     
                     let subjectString = String(format: "Support PhoneBattery: %@ (%@)", shortString, buildString)
-                    let bodyString = String(format: "\n\n\n----\niOS Version: %@\nDevice: %@\n", device.systemVersion, device.model)
+                    let bodyString = String(format: "\n\n\n----\niOS Version: %@\nDevice: %@\n", device.systemVersion, hardwareIdentifier())
                     mailComposer.setMessageBody(bodyString, isHTML: false)
                     mailComposer.setSubject(subjectString)
                     mailComposer.setToRecipients(["help@marcelvoss.com"])
@@ -472,6 +472,20 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
             }
         }
     }
+    
+    func hardwareIdentifier() -> String {
+        var name: [Int32] = [CTL_HW, HW_MACHINE]
+        var size: Int = 2
+        sysctl(&name, 2, nil, &size, &name, 0)
+        var hw_machine = [CChar](count: Int(size), repeatedValue: 0)
+        sysctl(&name, 2, &hw_machine, &size, &name, 0)
+        
+        let hardware: String = String.fromCString(hw_machine)!
+        print("")
+        return hardware
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate
     
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
         self.dismissViewControllerAnimated(true, completion: nil)

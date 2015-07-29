@@ -439,11 +439,11 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                     mailComposer.navigationBar.tintColor = UIColor(red:0, green:0.86, blue:0.55, alpha:1)
                     
                     let device = UIDevice.currentDevice()
-                    let shortString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
-                    let buildString = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+                    let (shortString, buildString) = DeviceInformation.appIdentifiers()
                     
                     let subjectString = String(format: "Support PhoneBattery: %@ (%@)", shortString, buildString)
                     let bodyString = String(format: "\n\n\n----\niOS Version: %@\nDevice: %@\n", device.systemVersion, hardwareIdentifier())
+                    
                     mailComposer.setMessageBody(bodyString, isHTML: false)
                     mailComposer.setSubject(subjectString)
                     mailComposer.setToRecipients(["help@marcelvoss.com"])
@@ -481,7 +481,6 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         sysctl(&name, 2, &hw_machine, &size, &name, 0)
         
         let hardware: String = String.fromCString(hw_machine)!
-        print("")
         return hardware
     }
     

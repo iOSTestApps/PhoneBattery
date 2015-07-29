@@ -72,8 +72,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
         visualEffectView.addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Left, relatedBy: .Equal, toItem: appIconImageView, attribute: .Right, multiplier: 1.0, constant: 20))
         
         
-        let shortString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
-        let buildString = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+        let (shortString, buildString) = DeviceInformation.appIdentifiers()
         
         let versionLabel = UILabel()
         versionLabel.text = String(format: "Version %@ (%@)", shortString, buildString)

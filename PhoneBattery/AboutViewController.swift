@@ -442,7 +442,7 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                     let (shortString, buildString) = DeviceInformation.appIdentifiers()
                     
                     let subjectString = String(format: "Support PhoneBattery: %@ (%@)", shortString, buildString)
-                    let bodyString = String(format: "\n\n\n----\niOS Version: %@\nDevice: %@\n", device.systemVersion, hardwareIdentifier())
+                    let bodyString = String(format: "\n\n\n----\niOS Version: %@\nDevice: %@\n", device.systemVersion, DeviceInformation.hardwareIdentifier())
                     
                     mailComposer.setMessageBody(bodyString, isHTML: false)
                     mailComposer.setSubject(subjectString)
@@ -471,17 +471,6 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
                 UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/marcelvoss/PhoneBattery")!)
             }
         }
-    }
-    
-    func hardwareIdentifier() -> String {
-        var name: [Int32] = [CTL_HW, HW_MACHINE]
-        var size: Int = 2
-        sysctl(&name, 2, nil, &size, &name, 0)
-        var hw_machine = [CChar](count: Int(size), repeatedValue: 0)
-        sysctl(&name, 2, &hw_machine, &size, &name, 0)
-        
-        let hardware: String = String.fromCString(hw_machine)!
-        return hardware
     }
     
     // MARK: MFMailComposeViewControllerDelegate

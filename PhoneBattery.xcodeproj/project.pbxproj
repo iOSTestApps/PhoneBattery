@@ -130,8 +130,8 @@
 		1F2F152C1B67C0890073F61A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */,
 				1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */,
+				1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

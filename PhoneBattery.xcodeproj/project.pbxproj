@@ -24,6 +24,7 @@
 		1FC721161B3440E800F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721151B3440E800F9DDEA /* Images.xcassets */; };
 		1FC721191B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FC720FF1B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FEBBA941B68FFB400111B23 /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */; };
+		1FEE55D21B6923040097DCAD /* BatteryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE55D11B6923040097DCAD /* BatteryInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		1FC721131B3440E800F9DDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1FC721151B3440E800F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInformation.swift; sourceTree = "<group>"; };
+		1FEE55D11B6923040097DCAD /* BatteryInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryInformation.swift; sourceTree = "<group>"; };
 		1FF54D261B3AC433009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Interface.strings; sourceTree = "<group>"; };
 		1FF54D271B3AC447009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,8 +220,9 @@
 		1FC721001B3440E800F9DDEA /* PhoneBattery WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				1FC721031B3440E800F9DDEA /* InterfaceController.swift */,
 				1FC721051B3440E800F9DDEA /* GlanceController.swift */,
+				1FC721031B3440E800F9DDEA /* InterfaceController.swift */,
+				1FEE55D11B6923040097DCAD /* BatteryInformation.swift */,
 				1FC721011B3440E800F9DDEA /* Supporting Files */,
 			);
 			path = "PhoneBattery WatchKit Extension";
@@ -449,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC721041B3440E800F9DDEA /* InterfaceController.swift in Sources */,
+				1FEE55D21B6923040097DCAD /* BatteryInformation.swift in Sources */,
 				1FC721061B3440E800F9DDEA /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

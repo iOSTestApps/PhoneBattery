@@ -23,6 +23,7 @@
 		1FC721141B3440E800F9DDEA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721121B3440E800F9DDEA /* Interface.storyboard */; };
 		1FC721161B3440E800F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721151B3440E800F9DDEA /* Images.xcassets */; };
 		1FC721191B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FC720FF1B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FEBBA941B68FFB400111B23 /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		1FC721111B3440E800F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC721131B3440E800F9DDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1FC721151B3440E800F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInformation.swift; sourceTree = "<group>"; };
 		1FF54D261B3AC433009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Interface.strings; sourceTree = "<group>"; };
 		1FF54D271B3AC447009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */,
+				1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -334,6 +337,11 @@
 					1FC720DA1B3440E100F9DDEA = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = 2379EAXEPK;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					1FC720EA1B3440E100F9DDEA = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -421,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA8EC371B370439001BEE4B /* CreatorTableViewCell.swift in Sources */,
+				1FEBBA941B68FFB400111B23 /* DeviceInformation.swift in Sources */,
 				1F2F152B1B67BF970073F61A /* UIImage+Additions.swift in Sources */,
 				1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */,
 				1FA8EC351B36FE7C001BEE4B /* AboutViewController.swift in Sources */,

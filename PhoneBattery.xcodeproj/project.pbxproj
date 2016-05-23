@@ -10,46 +10,12 @@
 		1F2F152B1B67BF970073F61A /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */; };
 		1F3148E31B39A9E100AD0038 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F3148E21B39A9E100AD0038 /* Launch Screen.xib */; };
 		1F83509D1B3977FA00E65388 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F8350A01B3977FA00E65388 /* Localizable.strings */; };
-		1F83509E1B3977FA00E65388 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F8350A01B3977FA00E65388 /* Localizable.strings */; };
 		1FA8EC351B36FE7C001BEE4B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA8EC341B36FE7C001BEE4B /* AboutViewController.swift */; };
 		1FA8EC371B370439001BEE4B /* CreatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA8EC361B370439001BEE4B /* CreatorTableViewCell.swift */; };
 		1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC720E01B3440E100F9DDEA /* AppDelegate.swift */; };
 		1FC720E31B3440E100F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC720E21B3440E100F9DDEA /* Images.xcassets */; };
-		1FC720F21B3440E100F9DDEA /* PhoneBatteryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC720F11B3440E100F9DDEA /* PhoneBatteryTests.swift */; };
-		1FC721041B3440E800F9DDEA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC721031B3440E800F9DDEA /* InterfaceController.swift */; };
-		1FC721061B3440E800F9DDEA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC721051B3440E800F9DDEA /* GlanceController.swift */; };
-		1FC721081B3440E800F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721071B3440E800F9DDEA /* Images.xcassets */; };
-		1FC7210C1B3440E800F9DDEA /* PhoneBattery WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 1FC7210B1B3440E800F9DDEA /* PhoneBattery WatchKit App.app */; };
-		1FC721141B3440E800F9DDEA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721121B3440E800F9DDEA /* Interface.storyboard */; };
-		1FC721161B3440E800F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC721151B3440E800F9DDEA /* Images.xcassets */; };
-		1FC721191B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FC720FF1B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FEBBA941B68FFB400111B23 /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */; };
-		1FEE55D21B6923040097DCAD /* BatteryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE55D11B6923040097DCAD /* BatteryInformation.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1FC720EC1B3440E100F9DDEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FC720D31B3440E100F9DDEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FC720DA1B3440E100F9DDEA;
-			remoteInfo = PhoneBattery;
-		};
-		1FC7210D1B3440E800F9DDEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FC720D31B3440E100F9DDEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FC7210A1B3440E800F9DDEA;
-			remoteInfo = "PhoneBattery WatchKit App";
-		};
-		1FC721171B3440E800F9DDEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FC720D31B3440E100F9DDEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FC720FE1B3440E800F9DDEA;
-			remoteInfo = "PhoneBattery WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1FC721201B3440E800F9DDEA /* Embed App Extensions */ = {
@@ -58,7 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1FC721191B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +35,7 @@
 		1F2228AE1B563A4000383648 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1F2228AF1B563A4600383648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
 		1F2228B01B563A4600383648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1F2DDAF91CF2886800AE9379 /* PhoneBatteryTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PhoneBatteryTests copy-Info.plist"; path = "/Users/Sid/Gits/BB/TestApps/PhoneBattery/PhoneBatteryTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		1F3148E21B39A9E100AD0038 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		1F7C35951B4AD53200777EA6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
@@ -86,15 +52,12 @@
 		1FC720DF1B3440E100F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC720E01B3440E100F9DDEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FC720E21B3440E100F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1FC720EB1B3440E100F9DDEA /* PhoneBatteryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneBatteryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC720F01B3440E100F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC720F11B3440E100F9DDEA /* PhoneBatteryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBatteryTests.swift; sourceTree = "<group>"; };
-		1FC720FF1B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PhoneBattery WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC721021B3440E800F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC721031B3440E800F9DDEA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		1FC721051B3440E800F9DDEA /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		1FC721071B3440E800F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1FC7210B1B3440E800F9DDEA /* PhoneBattery WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PhoneBattery WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC721111B3440E800F9DDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC721131B3440E800F9DDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1FC721151B3440E800F9DDEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -106,20 +69,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		1FC720D81B3440E100F9DDEA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC720E81B3440E100F9DDEA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC720FC1B3440E800F9DDEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,6 +111,7 @@
 				1FC721001B3440E800F9DDEA /* PhoneBattery WatchKit Extension */,
 				1FC7210F1B3440E800F9DDEA /* PhoneBattery WatchKit App */,
 				1FC720DC1B3440E100F9DDEA /* Products */,
+				1F2DDAF91CF2886800AE9379 /* PhoneBatteryTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,9 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				1FC720DB1B3440E100F9DDEA /* PhoneBattery.app */,
-				1FC720EB1B3440E100F9DDEA /* PhoneBatteryTests.xctest */,
-				1FC720FF1B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex */,
-				1FC7210B1B3440E800F9DDEA /* PhoneBattery WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,63 +217,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				1FC721181B3440E800F9DDEA /* PBXTargetDependency */,
 			);
 			name = PhoneBattery;
 			productName = PhoneBattery;
 			productReference = 1FC720DB1B3440E100F9DDEA /* PhoneBattery.app */;
 			productType = "com.apple.product-type.application";
-		};
-		1FC720EA1B3440E100F9DDEA /* PhoneBatteryTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC720F81B3440E100F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBatteryTests" */;
-			buildPhases = (
-				1FC720E71B3440E100F9DDEA /* Sources */,
-				1FC720E81B3440E100F9DDEA /* Frameworks */,
-				1FC720E91B3440E100F9DDEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1FC720ED1B3440E100F9DDEA /* PBXTargetDependency */,
-			);
-			name = PhoneBatteryTests;
-			productName = PhoneBatteryTests;
-			productReference = 1FC720EB1B3440E100F9DDEA /* PhoneBatteryTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1FC720FE1B3440E800F9DDEA /* PhoneBattery WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC7211D1B3440E800F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBattery WatchKit Extension" */;
-			buildPhases = (
-				1FC720FB1B3440E800F9DDEA /* Sources */,
-				1FC720FC1B3440E800F9DDEA /* Frameworks */,
-				1FC720FD1B3440E800F9DDEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1FC7210E1B3440E800F9DDEA /* PBXTargetDependency */,
-			);
-			name = "PhoneBattery WatchKit Extension";
-			productName = "PhoneBattery WatchKit Extension";
-			productReference = 1FC720FF1B3440E800F9DDEA /* PhoneBattery WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		1FC7210A1B3440E800F9DDEA /* PhoneBattery WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC7211A1B3440E800F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBattery WatchKit App" */;
-			buildPhases = (
-				1FC721091B3440E800F9DDEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "PhoneBattery WatchKit App";
-			productName = "PhoneBattery WatchKit App";
-			productReference = 1FC7210B1B3440E800F9DDEA /* PhoneBattery WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
 
@@ -334,29 +229,18 @@
 		1FC720D31B3440E100F9DDEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Marcel Voss";
 				TargetAttributes = {
 					1FC720DA1B3440E100F9DDEA = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 2379EAXEPK;
+						DevelopmentTeam = XYL49Z8YJS;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
-					};
-					1FC720EA1B3440E100F9DDEA = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 1FC720DA1B3440E100F9DDEA;
-					};
-					1FC720FE1B3440E800F9DDEA = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 2379EAXEPK;
-					};
-					1FC7210A1B3440E800F9DDEA = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 2379EAXEPK;
 					};
 				};
 			};
@@ -380,9 +264,6 @@
 			projectRoot = "";
 			targets = (
 				1FC720DA1B3440E100F9DDEA /* PhoneBattery */,
-				1FC720EA1B3440E100F9DDEA /* PhoneBatteryTests */,
-				1FC720FE1B3440E800F9DDEA /* PhoneBattery WatchKit Extension */,
-				1FC7210A1B3440E800F9DDEA /* PhoneBattery WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -395,32 +276,6 @@
 				1F83509D1B3977FA00E65388 /* Localizable.strings in Resources */,
 				1FC720E31B3440E100F9DDEA /* Images.xcassets in Resources */,
 				1F3148E31B39A9E100AD0038 /* Launch Screen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC720E91B3440E100F9DDEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC720FD1B3440E800F9DDEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FC721081B3440E800F9DDEA /* Images.xcassets in Resources */,
-				1F83509E1B3977FA00E65388 /* Localizable.strings in Resources */,
-				1FC7210C1B3440E800F9DDEA /* PhoneBattery WatchKit App.app in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC721091B3440E800F9DDEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FC721141B3440E800F9DDEA /* Interface.storyboard in Resources */,
-				1FC721161B3440E800F9DDEA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,43 +294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC720E71B3440E100F9DDEA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FC720F21B3440E100F9DDEA /* PhoneBatteryTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC720FB1B3440E800F9DDEA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FC721041B3440E800F9DDEA /* InterfaceController.swift in Sources */,
-				1FEE55D21B6923040097DCAD /* BatteryInformation.swift in Sources */,
-				1FC721061B3440E800F9DDEA /* GlanceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1FC720ED1B3440E100F9DDEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1FC720DA1B3440E100F9DDEA /* PhoneBattery */;
-			targetProxy = 1FC720EC1B3440E100F9DDEA /* PBXContainerItemProxy */;
-		};
-		1FC7210E1B3440E800F9DDEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1FC7210A1B3440E800F9DDEA /* PhoneBattery WatchKit App */;
-			targetProxy = 1FC7210D1B3440E800F9DDEA /* PBXContainerItemProxy */;
-		};
-		1FC721181B3440E800F9DDEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1FC720FE1B3440E800F9DDEA /* PhoneBattery WatchKit Extension */;
-			targetProxy = 1FC721171B3440E800F9DDEA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1F8350A01B3977FA00E65388 /* Localizable.strings */ = {
@@ -526,7 +345,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Siddhartha Balasubramanian (Z2B29KW6S6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Siddhartha Balasubramanian (Z2B29KW6S6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -570,7 +390,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Siddhartha Balasubramanian (Z2B29KW6S6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Siddhartha Balasubramanian (Z2B29KW6S6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -595,12 +416,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Doe Pics Hit, Inc. (L4FET847JL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhoneBattery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "01f41bc9-42bc-47c8-83f9-21c18855bb81";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBattery/PhoneBattery-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -611,115 +432,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Doe Pics Hit, Inc. (L4FET847JL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhoneBattery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "01f41bc9-42bc-47c8-83f9-21c18855bb81";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhoneBattery/PhoneBattery-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		1FC720F91B3440E100F9DDEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PhoneBatteryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneBattery.app/PhoneBattery";
-			};
-			name = Debug;
-		};
-		1FC720FA1B3440E100F9DDEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PhoneBatteryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneBattery.app/PhoneBattery";
-			};
-			name = Release;
-		};
-		1FC7211B1B3440E800F9DDEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IBSC_MODULE = PhoneBattery_WatchKit_Extension;
-				INFOPLIST_FILE = "PhoneBattery WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Debug;
-		};
-		1FC7211C1B3440E800F9DDEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				IBSC_MODULE = PhoneBattery_WatchKit_Extension;
-				INFOPLIST_FILE = "PhoneBattery WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Release;
-		};
-		1FC7211E1B3440E800F9DDEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PhoneBattery WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		1FC7211F1B3440E800F9DDEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "PhoneBattery WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -740,33 +459,6 @@
 			buildConfigurations = (
 				1FC720F61B3440E100F9DDEA /* Debug */,
 				1FC720F71B3440E100F9DDEA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1FC720F81B3440E100F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBatteryTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FC720F91B3440E100F9DDEA /* Debug */,
-				1FC720FA1B3440E100F9DDEA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1FC7211A1B3440E800F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBattery WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FC7211B1B3440E800F9DDEA /* Debug */,
-				1FC7211C1B3440E800F9DDEA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1FC7211D1B3440E800F9DDEA /* Build configuration list for PBXNativeTarget "PhoneBattery WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FC7211E1B3440E800F9DDEA /* Debug */,
-				1FC7211F1B3440E800F9DDEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

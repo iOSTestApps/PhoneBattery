@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A8EFC77CF48EFD5525B05F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4B753D86DDD635DD17414 /* AVFoundation.framework */; };
 		1F2F152B1B67BF970073F61A /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F152A1B67BF970073F61A /* UIImage+Additions.swift */; };
 		1F3148E31B39A9E100AD0038 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F3148E21B39A9E100AD0038 /* Launch Screen.xib */; };
 		1F83509D1B3977FA00E65388 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F8350A01B3977FA00E65388 /* Localizable.strings */; };
@@ -15,6 +16,14 @@
 		1FC720E11B3440E100F9DDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC720E01B3440E100F9DDEA /* AppDelegate.swift */; };
 		1FC720E31B3440E100F9DDEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC720E21B3440E100F9DDEA /* Images.xcassets */; };
 		1FEBBA941B68FFB400111B23 /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBBA931B68FFB400111B23 /* DeviceInformation.swift */; };
+		3D917975CC3B58356E152893 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC33E8D4D88600C457348CC3 /* CoreTelephony.framework */; };
+		5E29F6B24797CDF384C45CEF /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7232AE8F07DAB7E2F6F654D4 /* BuddyBuildSDK.framework */; };
+		A0E875DDD8B501FB8A7D3EE0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C40F11C1C04DB1E221D91 /* CoreText.framework */; };
+		AD342BC7BBA38B8113694D51 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398BEF47CB5860F689F5F82D /* AssetsLibrary.framework */; };
+		B50FCB4A83B19F4BB54E5ED5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5B540F13D578EC21EEBFF5 /* SystemConfiguration.framework */; };
+		B8ED3FE99CFDB93E3E3C64DC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BB37AC5C90A54BB114831 /* CoreMedia.framework */; };
+		CE19C70571F5D8CDADB9F320 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A124143694FF1B89913488 /* CoreVideo.framework */; };
+		D0C85476387D2455F762CD01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E92C62A8BA04D712082A78C /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		184BB37AC5C90A54BB114831 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		1F2228AD1B563A4000383648 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		1F2228AE1B563A4000383648 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1F2228AF1B563A4600383648 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Interface.strings"; sourceTree = "<group>"; };
@@ -65,6 +75,14 @@
 		1FEE55D11B6923040097DCAD /* BatteryInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryInformation.swift; sourceTree = "<group>"; };
 		1FF54D261B3AC433009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Interface.strings; sourceTree = "<group>"; };
 		1FF54D271B3AC447009664B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		379C40F11C1C04DB1E221D91 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		38B4B753D86DDD635DD17414 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		398BEF47CB5860F689F5F82D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		40A124143694FF1B89913488 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4E92C62A8BA04D712082A78C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7232AE8F07DAB7E2F6F654D4 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		EC33E8D4D88600C457348CC3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FB5B540F13D578EC21EEBFF5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E29F6B24797CDF384C45CEF /* BuddyBuildSDK.framework in Frameworks */,
+				AD342BC7BBA38B8113694D51 /* AssetsLibrary.framework in Frameworks */,
+				A0E875DDD8B501FB8A7D3EE0 /* CoreText.framework in Frameworks */,
+				3D917975CC3B58356E152893 /* CoreTelephony.framework in Frameworks */,
+				B50FCB4A83B19F4BB54E5ED5 /* SystemConfiguration.framework in Frameworks */,
+				D0C85476387D2455F762CD01 /* QuartzCore.framework in Frameworks */,
+				00A8EFC77CF48EFD5525B05F /* AVFoundation.framework in Frameworks */,
+				B8ED3FE99CFDB93E3E3C64DC /* CoreMedia.framework in Frameworks */,
+				CE19C70571F5D8CDADB9F320 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +139,7 @@
 				1FC7210F1B3440E800F9DDEA /* PhoneBattery WatchKit App */,
 				1FC720DC1B3440E100F9DDEA /* Products */,
 				1F2DDAF91CF2886800AE9379 /* PhoneBatteryTests copy-Info.plist */,
+				3217B70FC566F21254478013 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +228,22 @@
 				1FC721111B3440E800F9DDEA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3217B70FC566F21254478013 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7232AE8F07DAB7E2F6F654D4 /* BuddyBuildSDK.framework */,
+				398BEF47CB5860F689F5F82D /* AssetsLibrary.framework */,
+				379C40F11C1C04DB1E221D91 /* CoreText.framework */,
+				EC33E8D4D88600C457348CC3 /* CoreTelephony.framework */,
+				FB5B540F13D578EC21EEBFF5 /* SystemConfiguration.framework */,
+				4E92C62A8BA04D712082A78C /* QuartzCore.framework */,
+				38B4B753D86DDD635DD17414 /* AVFoundation.framework */,
+				184BB37AC5C90A54BB114831 /* CoreMedia.framework */,
+				40A124143694FF1B89913488 /* CoreVideo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +462,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PhoneBattery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +482,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PhoneBattery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
